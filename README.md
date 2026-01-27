@@ -50,31 +50,6 @@ Book Explorer follows a **Modular MVVM-Clean Architecture** with strict dependen
 
 > Each module can be developed, tested, and reasoned about in isolation.
 
----
-
-## 📦 Module Structure
-
-book-explorer-ios
-│
-├── BookExplorerApp # App entry point & dependency composition
-│
-├── Packages
-│ ├── Core # Domain models & pure business rules
-│ ├── CoreInterfaces # Protocols & abstractions
-│ ├── CoreUtilities # Shared helpers & extensions
-│ ├── Logging # Logging infrastructure (Decorator pattern)
-│ ├── Analytics # Analytics abstraction
-│ ├── BooksData # Networking, persistence, repositories
-│ ├── BooksListFeature # Books list & search feature
-│ └── BookDetailsFeature # Book details & reviews feature
-│
-├── Architecture # Architecture docs & ADRs
-├── Docs # Contribution & coding guidelines
-└── .github # CI, PR templates, issue templates
-
-
-
----
 
 ## 🧩 Modularization Strategy
 
