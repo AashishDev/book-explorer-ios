@@ -22,6 +22,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		32A1929A2F2924FD0074D4AD /* Exceptions for "Resources" folder in "BookExplorer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				README.md,
+			);
+			target = 32EF24A72F29099100E2F365 /* BookExplorer */;
+		};
+		32A1929B2F2925020074D4AD /* Exceptions for "Architecture" folder in "BookExplorer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				README.md,
+			);
+			target = 32EF24A72F29099100E2F365 /* BookExplorer */;
+		};
+		32A1929C2F2925060074D4AD /* Exceptions for "Docs" folder in "BookExplorer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				README.md,
+			);
+			target = 32EF24A72F29099100E2F365 /* BookExplorer */;
+		};
 		32EF24D92F2919B600E2F365 /* Exceptions for "Packages" folder in "BookExplorer" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -40,16 +61,25 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		32A192902F291B110074D4AD /* Architecture */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				32A1929B2F2925020074D4AD /* Exceptions for "Architecture" folder in "BookExplorer" target */,
+			);
 			path = Architecture;
 			sourceTree = "<group>";
 		};
 		32A192912F291B160074D4AD /* Resources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				32A1929A2F2924FD0074D4AD /* Exceptions for "Resources" folder in "BookExplorer" target */,
+			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
 		32A192922F291B240074D4AD /* Docs */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				32A1929C2F2925060074D4AD /* Exceptions for "Docs" folder in "BookExplorer" target */,
+			);
 			path = Docs;
 			sourceTree = "<group>";
 		};
