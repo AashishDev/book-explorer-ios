@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3270157D2F2A6D9200C95BED /* BooksListFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 3270157C2F2A6D9200C95BED /* BooksListFeature */; };
+		3270157F2F2A6F8000C95BED /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 3270157E2F2A6F8000C95BED /* Core */; };
+		327015812F2A6F8500C95BED /* BooksData in Frameworks */ = {isa = PBXBuildFile; productRef = 327015802F2A6F8500C95BED /* BooksData */; };
+		327015832F2A6F8A00C95BED /* CoreInterfaces in Frameworks */ = {isa = PBXBuildFile; productRef = 327015822F2A6F8A00C95BED /* CoreInterfaces */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		32EF24B62F29099200E2F365 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -108,6 +115,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327015812F2A6F8500C95BED /* BooksData in Frameworks */,
+				3270157D2F2A6D9200C95BED /* BooksListFeature in Frameworks */,
+				3270157F2F2A6F8000C95BED /* Core in Frameworks */,
+				327015832F2A6F8A00C95BED /* CoreInterfaces in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +132,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3270157B2F2A6D9200C95BED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		32EF249F2F29099100E2F365 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +148,7 @@
 				32A192912F291B160074D4AD /* Resources */,
 				32A192902F291B110074D4AD /* Architecture */,
 				32EF24B82F29099200E2F365 /* BookExplorerTests */,
+				3270157B2F2A6D9200C95BED /* Frameworks */,
 				32EF24A92F29099100E2F365 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -167,6 +186,10 @@
 			);
 			name = BookExplorer;
 			packageProductDependencies = (
+				3270157C2F2A6D9200C95BED /* BooksListFeature */,
+				3270157E2F2A6F8000C95BED /* Core */,
+				327015802F2A6F8500C95BED /* BooksData */,
+				327015822F2A6F8A00C95BED /* CoreInterfaces */,
 			);
 			productName = BookExplorer;
 			productReference = 32EF24A82F29099100E2F365 /* BookExplorer.app */;
@@ -223,6 +246,9 @@
 			);
 			mainGroup = 32EF249F2F29099100E2F365;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3270157A2F2A6D2B00C95BED /* XCLocalSwiftPackageReference "Packages/BooksListFeature" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 32EF24A92F29099100E2F365 /* Products */;
 			projectDirPath = "";
@@ -555,6 +581,32 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		3270157A2F2A6D2B00C95BED /* XCLocalSwiftPackageReference "Packages/BooksListFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/BooksListFeature;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3270157C2F2A6D9200C95BED /* BooksListFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BooksListFeature;
+		};
+		3270157E2F2A6F8000C95BED /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		327015802F2A6F8500C95BED /* BooksData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BooksData;
+		};
+		327015822F2A6F8A00C95BED /* CoreInterfaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreInterfaces;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 32EF24A02F29099100E2F365 /* Project object */;
 }
