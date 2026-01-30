@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import BooksListFeature
+import CoreInterfaces
+import BooksData
 
 @main
 struct BookExplorerApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let viewModel = BookListViewModel(
+                bookRepository:MockBookRepository()
+            )
+            
+            BookListView(viewModel: viewModel)
         }
     }
 }
