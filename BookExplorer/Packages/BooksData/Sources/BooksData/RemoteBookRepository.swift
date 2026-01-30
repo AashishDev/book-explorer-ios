@@ -10,16 +10,16 @@ import CoreInterfaces
 import Core
 import NetworkKit
 
-@MainActor
-public final class RemoteBookRepository: BookRepositoryProtocol {
-    
-    private let httpClient: HTTPClientProtocol
-    
-    public init(httpClient: HTTPClientProtocol) {
-        self.httpClient = httpClient
-    }
-    
-    public func fetchBooks(query: String?) async throws -> [Core.Book] {
-        return []
-    }
-}
+//@MainActor
+//public final class RemoteBookRepository: BookRepositoryProtocol {
+//    
+//    private let httpClient: HTTPClientProtocol
+//    
+//    public init(httpClient: HTTPClientProtocol) {
+//        self.httpClient = httpClient
+//    }
+//    
+//    public func fetchBooks(query: String?) async throws -> [Core.Book] {
+//        return []
+//    }
+//}

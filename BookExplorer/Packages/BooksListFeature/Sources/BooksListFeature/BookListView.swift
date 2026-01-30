@@ -13,30 +13,43 @@ public struct BookListView: View {
     public var body: some View {
         
         NavigationView {
-            List {
-                if viewModel.isLoading {
-                    ProgressView("Loading...")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if let error = viewModel.errorMessage {
-                    Text(error)
-                        .foregroundColor(.red)
-                        .padding()
-                } else {
-                    
-                    ForEach(viewModel.books) { book in
-                        NavigationLink(destination: BookDetailView(book: book)) {
-                            BookRowView(book: book)
-                       }
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .ignoresSafeArea()
+                List {
+                    if viewModel.isLoading {
+                        ProgressView("Loading...")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    } else if let error = viewModel.errorMessage {
+                        Text(error)
+                            .foregroundColor(.red)
+                            .padding()
+                    } else {
+                        
+                        ForEach(viewModel.books) { book in
+                            NavigationLink(destination: BookDetailView(book: book)) {
+                                BookRowView(book: book){
+                                }
+                            }
+                            .listRowBackground(Color.clear) // ✅ remove white
+                            .listRowSeparator(.hidden)
+                            .listRowInsets(
+                                EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16)
+                            )
+                        }
                     }
                 }
             }
             .navigationTitle("Books")
             .navigationBarTitleDisplayMode(.large)
-
         }
         .listStyle(.plain)
-
-        .searchable(text: $viewModel.searchQuery,placement: .navigationBarDrawer(displayMode: .always), prompt: "Search books")
+        .scrollContentBackground(.hidden)
+        .searchable(
+            text: $viewModel.searchQuery,
+            placement: .navigationBarDrawer(displayMode: .always),
+            prompt: "Search books"
+        )
         .onChange(of: viewModel.searchQuery) {
             Task {
                 await viewModel.fetchBooks()

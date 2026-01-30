@@ -10,38 +10,59 @@ import Core
 
 struct BookRowView: View {
     let book: Book
-    
+    let onFavoriteTap: (() -> Void)?
+
     var body: some View {
-        HStack {
-            AsyncImage(url: book.coverImage) { image in
-                image.resizable()
-            } placeholder: {
-                Color.gray
+        ZStack(alignment: .topTrailing) {
+
+            // Card content
+            HStack {
+                AsyncImage(url: book.coverImage) { image in
+                    image.resizable()
+                } placeholder: {
+                    Color.gray
+                }
+                .frame(width: 130, height: 150)
+                .cornerRadius(8)
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(book.title)
+                        .font(.headline)
+
+                    Text(book.author)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+
+                    Text("$\(book.price, specifier: "%.2f")")
+                        .font(.subheadline)
+
+                    Spacer()
+                }
+
+                Spacer()
             }
-            .frame(width: 150, height: 150)
-            .cornerRadius(5)
-            
-            VStack(alignment: .leading, spacing: 5) {
-                Text(book.title)
-                    .font(.headline)
-                Text(book.author)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                Text("$\(book.price, specifier: "%.2f")")
-                    .font(.subheadline)
+            .padding()
+
+            // ❤️ Favorite button (top-right)
+            Button(action: {
+                onFavoriteTap?()
+            }) {
+                Image(systemName: book.isFavorite == true ? "heart.fill" : "heart")
+                    .foregroundColor(book.isFavorite == true ? .red : .gray)
+                    .background(
+                        Circle()
+                            .fill(Color(.systemBackground))
+                    )
             }
-            Spacer()
-            if book.isFavorite ?? false {
-                Image(systemName: "heart.fill")
-                    .foregroundColor(.red)
-            }
+            .padding(10)
         }
-        .padding(.vertical, 5)
         .background(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: 10)
                 .fill(Color(.systemBackground))
                 .shadow(color: .black.opacity(0.05), radius: 4, y: 2)
         )
-        
+        //.padding(.horizontal,5)
     }
 }
+
+

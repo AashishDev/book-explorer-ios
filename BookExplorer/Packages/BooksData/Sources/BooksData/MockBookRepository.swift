@@ -31,7 +31,7 @@ public final class MockBookRepository: BookRepositoryProtocol {
             publishedAt: Date(timeIntervalSince1970: 1_500_000_000),
             coverImage: URL(string:"https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1627044952i/58613424.jpg"),
             price: 499.0,
-            isFavorite: false
+            isFavorite: true
         ),
         Book(
             id: 3,
@@ -49,7 +49,7 @@ public final class MockBookRepository: BookRepositoryProtocol {
             publishedAt: Date(timeIntervalSince1970: 1_600_000_000),
             coverImage: URL(string:"https://m.media-amazon.com/images/I/51saX49E+LL._AC_UF1000,1000_QL80_.jpg"),
             price: 0.0,
-            isFavorite: false
+            isFavorite: true
         )
     ]
     
@@ -77,7 +77,7 @@ public final class MockBookRepository: BookRepositoryProtocol {
         return book
     }
     
-    public func toggleFavorite(bookId: Int) async throws {
+    public func toggleFavorite(bookId: Int)  {
         if favoriteBookIds.contains(bookId) {
             favoriteBookIds.remove(bookId)
         } else {
