@@ -10,7 +10,7 @@ import Core
 
 struct BookRowView: View {
     let book: Book
-    let onFavoriteTap: (() -> Void)?
+    let onFavoriteTap: (() -> Void)? = nil
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
