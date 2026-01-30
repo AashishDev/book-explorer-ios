@@ -60,6 +60,7 @@
 				Core,
 				CoreUtilities,
 				Logging,
+				NetworkKit,
 			);
 			target = 32EF24A72F29099100E2F365 /* BookExplorer */;
 		};
