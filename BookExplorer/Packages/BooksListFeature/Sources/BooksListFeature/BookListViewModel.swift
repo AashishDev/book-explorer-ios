@@ -33,6 +33,10 @@ public class BookListViewModel: ObservableObject {
         }
         isLoading = false
     }
+    
+    func isfavorite(_ book: Book)   {
+        bookRepository.toggleFavorite(bookId: book.id)
+    }
 }
 
 

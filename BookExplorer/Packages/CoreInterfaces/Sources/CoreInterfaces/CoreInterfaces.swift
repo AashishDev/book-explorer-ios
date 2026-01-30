@@ -13,14 +13,15 @@ public protocol BookRepositoryProtocol {
     /// - Returns: Array of Book
     func fetchBooks(query: String?) async throws -> [Book]
     
-    /// Fetch details of a single book by ID
-    /// - Parameter id: Book ID
-    /// - Returns: Book object
-    func fetchBookDetails(id: Int) async throws -> Book
-
-    /// Add or remove book from favorites
-    func toggleFavorite(bookId: Int) async throws
     
-    /// Check if a book is favorite
-    func isFavorite(bookId: Int) async throws -> Bool
+//    /// Fetch details of a single book by ID
+//    /// - Parameter id: Book ID
+//    /// - Returns: Book object
+//    func fetchBookDetails(id: Int) async throws -> Book
+//
+//    /// Add or remove book from favorites
+    func toggleFavorite(bookId: Int)
+//    
+//    /// Check if a book is favorite
+//    func isFavorite(bookId: Int) async throws -> Bool
 }

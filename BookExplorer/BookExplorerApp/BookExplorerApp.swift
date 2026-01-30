@@ -7,19 +7,22 @@
 
 import SwiftUI
 import BooksListFeature
-import CoreInterfaces
 import BooksData
+import BookDetailsFeature
 
 @main
 struct BookExplorerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            let viewModel = BookListViewModel(
-                bookRepository:MockBookRepository()
-            )
+            let viewModel = BookListViewModel(bookRepository:MockBookRepository())
             
-            BookListView(viewModel: viewModel)
+            BookListView(viewModel: viewModel,
+                         makeBookDetailView: { book in
+                AnyView(
+                    BookDetailView(book: book)
+                )
+            })
         }
     }
 }

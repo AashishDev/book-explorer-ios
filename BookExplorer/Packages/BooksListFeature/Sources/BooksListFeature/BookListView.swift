@@ -2,46 +2,69 @@
 // https://docs.swift.org/swift-book
 
 import SwiftUI
+import Core
 
 public struct BookListView: View {
     @StateObject var viewModel: BookListViewModel
+    let makeBookDetailView: (Book) -> AnyView
     
-    public init(viewModel: BookListViewModel) {
+    public init(viewModel: BookListViewModel,
+                makeBookDetailView: @escaping (Book) -> AnyView
+    ) {
         _viewModel = StateObject(wrappedValue: viewModel)
+        self.makeBookDetailView = makeBookDetailView
     }
     
     public var body: some View {
+        
         NavigationView {
-            VStack {
-                TextField("Search books...", text: $viewModel.searchQuery)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                
-                if viewModel.isLoading {
-                    ProgressView("Loading...")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if let error = viewModel.errorMessage {
-                    Text(error)
-                        .foregroundColor(.red)
-                        .padding()
-                } else {
-                    List(viewModel.books) { book in
-                        NavigationLink(destination: BookDetailView(book: book)) {
-                            BookRowView(book: book)
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .ignoresSafeArea()
+                List {
+                    if viewModel.isLoading {
+                        ProgressView("Loading...")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    } else if let error = viewModel.errorMessage {
+                        Text(error)
+                            .foregroundColor(.red)
+                            .padding()
+                    } else {
+                        
+                        ForEach(viewModel.books) { book in
+                            NavigationLink {
+                                makeBookDetailView(book)
+                            } label: {
+                                BookRowView(book: book)
+                            }
+                            .listRowBackground(Color.clear) // ✅ remove white
+                            .listRowSeparator(.hidden)
+                            .listRowInsets(
+                                EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16)
+                            )
                         }
                     }
-                    .listStyle(PlainListStyle())
                 }
             }
             .navigationTitle("Books")
-            .onChange(of: viewModel.searchQuery) {
-                Task {
-                    await viewModel.fetchBooks()
-                }
-            }
-            .task {
+            .navigationBarTitleDisplayMode(.large)
+        }
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
+        .searchable(
+            text: $viewModel.searchQuery,
+            placement: .navigationBarDrawer(displayMode: .always),
+            prompt: "Search books"
+        )
+        .onChange(of: viewModel.searchQuery) {
+            Task {
                 await viewModel.fetchBooks()
             }
         }
+        .task {
+            await viewModel.fetchBooks()
+        }
     }
 }
+
+
