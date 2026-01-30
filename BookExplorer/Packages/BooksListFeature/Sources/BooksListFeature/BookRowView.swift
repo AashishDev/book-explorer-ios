@@ -10,7 +10,7 @@ import Core
 
 struct BookRowView: View {
     let book: Book
-
+    
     var body: some View {
         HStack {
             AsyncImage(url: book.coverImage) { image in
@@ -18,9 +18,9 @@ struct BookRowView: View {
             } placeholder: {
                 Color.gray
             }
-            .frame(width: 60, height: 90)
+            .frame(width: 150, height: 150)
             .cornerRadius(5)
-
+            
             VStack(alignment: .leading, spacing: 5) {
                 Text(book.title)
                     .font(.headline)
@@ -37,5 +37,11 @@ struct BookRowView: View {
             }
         }
         .padding(.vertical, 5)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color(.systemBackground))
+                .shadow(color: .black.opacity(0.05), radius: 4, y: 2)
+        )
+        
     }
 }

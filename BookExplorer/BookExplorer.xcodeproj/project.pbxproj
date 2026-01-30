@@ -11,6 +11,7 @@
 		3270157F2F2A6F8000C95BED /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 3270157E2F2A6F8000C95BED /* Core */; };
 		327015812F2A6F8500C95BED /* BooksData in Frameworks */ = {isa = PBXBuildFile; productRef = 327015802F2A6F8500C95BED /* BooksData */; };
 		327015832F2A6F8A00C95BED /* CoreInterfaces in Frameworks */ = {isa = PBXBuildFile; productRef = 327015822F2A6F8A00C95BED /* CoreInterfaces */; };
+		329919622F2CE3B0006FC047 /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 329919612F2CE3B0006FC047 /* NetworkKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 				327015812F2A6F8500C95BED /* BooksData in Frameworks */,
 				3270157D2F2A6D9200C95BED /* BooksListFeature in Frameworks */,
 				3270157F2F2A6F8000C95BED /* Core in Frameworks */,
+				329919622F2CE3B0006FC047 /* NetworkKit in Frameworks */,
 				327015832F2A6F8A00C95BED /* CoreInterfaces in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +193,7 @@
 				3270157E2F2A6F8000C95BED /* Core */,
 				327015802F2A6F8500C95BED /* BooksData */,
 				327015822F2A6F8A00C95BED /* CoreInterfaces */,
+				329919612F2CE3B0006FC047 /* NetworkKit */,
 			);
 			productName = BookExplorer;
 			productReference = 32EF24A82F29099100E2F365 /* BookExplorer.app */;
@@ -606,6 +609,10 @@
 		327015822F2A6F8A00C95BED /* CoreInterfaces */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreInterfaces;
+		};
+		329919612F2CE3B0006FC047 /* NetworkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

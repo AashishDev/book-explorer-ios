@@ -11,12 +11,9 @@ public struct BookListView: View {
     }
     
     public var body: some View {
+        
         NavigationView {
-            VStack {
-                TextField("Search books...", text: $viewModel.searchQuery)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                
+            List {
                 if viewModel.isLoading {
                     ProgressView("Loading...")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -25,23 +22,30 @@ public struct BookListView: View {
                         .foregroundColor(.red)
                         .padding()
                 } else {
-                    List(viewModel.books) { book in
+                    
+                    ForEach(viewModel.books) { book in
                         NavigationLink(destination: BookDetailView(book: book)) {
                             BookRowView(book: book)
-                        }
+                       }
                     }
-                    .listStyle(PlainListStyle())
                 }
             }
             .navigationTitle("Books")
-            .onChange(of: viewModel.searchQuery) {
-                Task {
-                    await viewModel.fetchBooks()
-                }
-            }
-            .task {
+            .navigationBarTitleDisplayMode(.large)
+
+        }
+        .listStyle(.plain)
+
+        .searchable(text: $viewModel.searchQuery,placement: .navigationBarDrawer(displayMode: .always), prompt: "Search books")
+        .onChange(of: viewModel.searchQuery) {
+            Task {
                 await viewModel.fetchBooks()
             }
         }
+        .task {
+            await viewModel.fetchBooks()
+        }
     }
 }
+
+
