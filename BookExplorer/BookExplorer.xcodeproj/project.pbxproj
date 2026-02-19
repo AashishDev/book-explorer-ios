@@ -7,12 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3270157D2F2A6D9200C95BED /* BooksListFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 3270157C2F2A6D9200C95BED /* BooksListFeature */; };
-		3270157F2F2A6F8000C95BED /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 3270157E2F2A6F8000C95BED /* Core */; };
-		327015812F2A6F8500C95BED /* BooksData in Frameworks */ = {isa = PBXBuildFile; productRef = 327015802F2A6F8500C95BED /* BooksData */; };
-		327015832F2A6F8A00C95BED /* CoreInterfaces in Frameworks */ = {isa = PBXBuildFile; productRef = 327015822F2A6F8A00C95BED /* CoreInterfaces */; };
-		329919622F2CE3B0006FC047 /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 329919612F2CE3B0006FC047 /* NetworkKit */; };
-		329919642F2D1368006FC047 /* BookDetailsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 329919632F2D1368006FC047 /* BookDetailsFeature */; };
+		32A18FF42F47476B008B4F08 /* BookFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 32A18FF32F47476B008B4F08 /* BookFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +21,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32A18FE92F47468E008B4F08 /* BookFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BookFeature; sourceTree = "<group>"; };
+		32A18FF12F474728008B4F08 /* Logging */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Logging; path = /Users/aashishtyagi/Desktop/Logging; sourceTree = "<absolute>"; };
+		32DB34AB2F473F4E00985DAB /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
+		32DB34AD2F473F8C00985DAB /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DesignSystem; path = "/Users/aashishtyagi/Desktop/Book Explorer/book-explorer-ios/BookExplorer/DesignSystem"; sourceTree = "<absolute>"; };
+		32DB34AE2F473FE100985DAB /* AnalyticsKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AnalyticsKit; sourceTree = "<group>"; };
 		32EF24A82F29099100E2F365 /* BookExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32EF24B52F29099200E2F365 /* BookExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -38,45 +38,9 @@
 			);
 			target = 32EF24A72F29099100E2F365 /* BookExplorer */;
 		};
-		32A1929B2F2925020074D4AD /* Exceptions for "Architecture" folder in "BookExplorer" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				README.md,
-			);
-			target = 32EF24A72F29099100E2F365 /* BookExplorer */;
-		};
-		32A1929C2F2925060074D4AD /* Exceptions for "Docs" folder in "BookExplorer" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				README.md,
-			);
-			target = 32EF24A72F29099100E2F365 /* BookExplorer */;
-		};
-		32EF24D92F2919B600E2F365 /* Exceptions for "Packages" folder in "BookExplorer" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Analytics,
-				BookDetailsFeature,
-				BooksData,
-				BooksListFeature,
-				Core,
-				CoreUtilities,
-				Logging,
-				NetworkKit,
-			);
-			target = 32EF24A72F29099100E2F365 /* BookExplorer */;
-		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		32A192902F291B110074D4AD /* Architecture */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				32A1929B2F2925020074D4AD /* Exceptions for "Architecture" folder in "BookExplorer" target */,
-			);
-			path = Architecture;
-			sourceTree = "<group>";
-		};
 		32A192912F291B160074D4AD /* Resources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -85,30 +49,9 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		32A192922F291B240074D4AD /* Docs */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				32A1929C2F2925060074D4AD /* Exceptions for "Docs" folder in "BookExplorer" target */,
-			);
-			path = Docs;
-			sourceTree = "<group>";
-		};
 		32EF24AA2F29099100E2F365 /* BookExplorerApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BookExplorerApp;
-			sourceTree = "<group>";
-		};
-		32EF24B82F29099200E2F365 /* BookExplorerTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BookExplorerTests;
-			sourceTree = "<group>";
-		};
-		32EF24D72F29199A00E2F365 /* Packages */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				32EF24D92F2919B600E2F365 /* Exceptions for "Packages" folder in "BookExplorer" target */,
-			);
-			path = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -118,12 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				327015812F2A6F8500C95BED /* BooksData in Frameworks */,
-				3270157D2F2A6D9200C95BED /* BooksListFeature in Frameworks */,
-				3270157F2F2A6F8000C95BED /* Core in Frameworks */,
-				329919642F2D1368006FC047 /* BookDetailsFeature in Frameworks */,
-				329919622F2CE3B0006FC047 /* NetworkKit in Frameworks */,
-				327015832F2A6F8A00C95BED /* CoreInterfaces in Frameworks */,
+				32A18FF42F47476B008B4F08 /* BookFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +75,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3270157B2F2A6D9200C95BED /* Frameworks */ = {
+		32A18FF22F47476B008B4F08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -147,13 +85,14 @@
 		32EF249F2F29099100E2F365 = {
 			isa = PBXGroup;
 			children = (
+				32A18FE92F47468E008B4F08 /* BookFeature */,
+				32A18FF12F474728008B4F08 /* Logging */,
+				32DB34AE2F473FE100985DAB /* AnalyticsKit */,
+				32DB34AD2F473F8C00985DAB /* DesignSystem */,
+				32DB34AB2F473F4E00985DAB /* Core */,
 				32EF24AA2F29099100E2F365 /* BookExplorerApp */,
-				32EF24D72F29199A00E2F365 /* Packages */,
-				32A192922F291B240074D4AD /* Docs */,
 				32A192912F291B160074D4AD /* Resources */,
-				32A192902F291B110074D4AD /* Architecture */,
-				32EF24B82F29099200E2F365 /* BookExplorerTests */,
-				3270157B2F2A6D9200C95BED /* Frameworks */,
+				32A18FF22F47476B008B4F08 /* Frameworks */,
 				32EF24A92F29099100E2F365 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -183,20 +122,12 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				32A192902F291B110074D4AD /* Architecture */,
 				32A192912F291B160074D4AD /* Resources */,
-				32A192922F291B240074D4AD /* Docs */,
 				32EF24AA2F29099100E2F365 /* BookExplorerApp */,
-				32EF24D72F29199A00E2F365 /* Packages */,
 			);
 			name = BookExplorer;
 			packageProductDependencies = (
-				3270157C2F2A6D9200C95BED /* BooksListFeature */,
-				3270157E2F2A6F8000C95BED /* Core */,
-				327015802F2A6F8500C95BED /* BooksData */,
-				327015822F2A6F8A00C95BED /* CoreInterfaces */,
-				329919612F2CE3B0006FC047 /* NetworkKit */,
-				329919632F2D1368006FC047 /* BookDetailsFeature */,
+				32A18FF32F47476B008B4F08 /* BookFeature */,
 			);
 			productName = BookExplorer;
 			productReference = 32EF24A82F29099100E2F365 /* BookExplorer.app */;
@@ -214,9 +145,6 @@
 			);
 			dependencies = (
 				32EF24B72F29099200E2F365 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				32EF24B82F29099200E2F365 /* BookExplorerTests */,
 			);
 			name = BookExplorerTests;
 			packageProductDependencies = (
@@ -254,7 +182,6 @@
 			mainGroup = 32EF249F2F29099100E2F365;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				3270157A2F2A6D2B00C95BED /* XCLocalSwiftPackageReference "Packages/BooksListFeature" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 32EF24A92F29099100E2F365 /* Products */;
@@ -445,7 +372,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,7 +390,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -484,7 +410,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -503,7 +428,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -527,7 +452,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookExplorer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BookExplorer";
 			};
 			name = Debug;
@@ -552,7 +477,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookExplorer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BookExplorer";
 			};
 			name = Release;
@@ -589,37 +514,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		3270157A2F2A6D2B00C95BED /* XCLocalSwiftPackageReference "Packages/BooksListFeature" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Packages/BooksListFeature;
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		3270157C2F2A6D9200C95BED /* BooksListFeature */ = {
+		32A18FF32F47476B008B4F08 /* BookFeature */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = BooksListFeature;
-		};
-		3270157E2F2A6F8000C95BED /* Core */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Core;
-		};
-		327015802F2A6F8500C95BED /* BooksData */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BooksData;
-		};
-		327015822F2A6F8A00C95BED /* CoreInterfaces */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CoreInterfaces;
-		};
-		329919612F2CE3B0006FC047 /* NetworkKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = NetworkKit;
-		};
-		329919632F2D1368006FC047 /* BookDetailsFeature */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BookDetailsFeature;
+			productName = BookFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
